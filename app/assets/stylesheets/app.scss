@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$font: 'Roboto', sans-serif;
+
+html, body, .wrapper{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.side{
+    flex: 1;
+}
+
+.main{
+    background: #EFF3F8;
+    flex: 4;
+}
