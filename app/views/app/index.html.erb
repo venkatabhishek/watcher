@@ -1,10 +1,12 @@
 <div class="wrapper">
 
-     <%= render 'partials/sidebar' %>
+	<%= render 'partials/sidebar' %>
 
-    <div class="main">
+		<div class="main">
 
-
+			<% @movies.each do |movie| %>
+				<%= movie['title'] %><br />
+            <% end %>
 
     </div>
 
