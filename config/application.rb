@@ -22,5 +22,11 @@ module Watcher
     # https://www.viget.com/articles/storing-secret-credentials-in-rails-5-2-and-up/
 
     config.tmbd_base_url = 'https://api.themoviedb.org/3'
+    config.tmbd_image_url = 'https://image.tmdb.org/t/p/'
+
+    config.autoload_paths += %W(#{config.root}/lib/modules)
+
+
+
   end
 end

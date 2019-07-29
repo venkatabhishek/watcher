@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 $font: 'Roboto', sans-serif;
+$sidebar-width: 300px;
 
 html, body, .wrapper{
     height: 100%;
+    font-family: $font;
+    background: #EFF3F8;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 body {
@@ -11,14 +18,58 @@ body {
 }
 
 .wrapper{
-    display: flex;
 }
 
 .side{
-    flex: 1;
+    background: #fff;
+    width: $sidebar-width;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .main{
-    background: #EFF3F8;
-    flex: 4;
+    margin-left: $sidebar-width;
+    padding: 20px 100px;
+}
+
+.large{
+    margin: 20px;
+}
+
+
+.large-wrapper{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.large > .img-wrapper{
+    width: 500px;
+    height: 300px;
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+h3{
+    font-weight: normal;
+}
+
+.toggle-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.toggle{
+    background: #FFDBD7;
+    width: 113px;
+    height: 36px;
+    border-radius: 18px;
+    color: #F17B68;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 11px;
 }

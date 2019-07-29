@@ -4,9 +4,34 @@
 
 		<div class="main">
 
-			<% @movies.each do |movie| %>
-				<%= movie['title'] %><br />
-            <% end %>
+            <h1>Now Showing</h1>
+            <h3>Movies appearing in theatres</h3>
+
+            <div class="large-wrapper">
+                <% @movies.each do |movie| %>
+                    <div class="large">
+                        <div class="img-wrapper">
+                            <img src="<%= movie['poster_path'] %>"/>
+                        </div>
+
+                        <h1><%= movie['title'] %></h1>
+                        <h3><%= movie['release_date'] %> - <%= movie['genres'] %></h3>
+
+                    </div>
+
+                    <br />
+                <% end %>
+            </div>
+
+            <h1>Browse By Genre</h1>
+            <div class="toggle-wrapper">
+                <% @genres.each do |genre| %>
+                    <div class="toggle">
+                        <%= genre %>
+                    </div>
+                <% end %>
+            </div>
+
 
     </div>
 
